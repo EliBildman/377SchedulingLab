@@ -140,7 +140,7 @@ Upload your `proc.c`  to gradescope question 2 when done.
 
 We need to be careful when testing this scheduler. Processes get priority 2 when run from the the terminal, but priority 10 otherwise, meaning anything we run will take precedence over internal processes like taking inputs from the terminal. However, Xv6 runs by default with two processors, giving us some leeway.
 
-Run test.c with `test &` again. Take a look at the process list with `ps`. Adjust the priority of your test process to 15. Run test.x again the same way. Print the process list. It should look like this:
+Run test.c with `test &` again. Take a look at the process list with `ps`. Adjust the priority of your test process to 15. Run test.c again the same way. Print the process list. It should look like this:
 
 ```
 $ ps
