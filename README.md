@@ -6,14 +6,14 @@
 In this lab, we will look over how Xv6 schedules processes and implement a basic priority queue scheduler. By the end of this lab, you should should
 understand how and where Xv6 schedules processes. Be sure to have the gradescope questions open as you go through.
 
-## Step One -- Get Everything in Place
+## Get Everything in Place
 
 1. Copy this repo into your elnux machine. 
 2. Change into the xv6-public directory. 
 3. Run `make` and `make-qemu` to make sure everything is working.
 4. Exit with `ctrl-a -> x`
 
-## Step Two -- Look Around
+## Look Around
 
 Open the `proc.c` file and find the `scheduler(void)` function. This is the function that runs scheduling for all of Xv6.
 
@@ -57,7 +57,7 @@ scheduler(void)
 
 Read through the function. Answer questions 1.1 and 1.2 on gradescope.
 
-## Step Three -- Get Familiar With the Commands
+## Get Familiar With the Commands
 
 Run Xv6 by executing `make qemu-nox` again. This repo has a few additions to help you with this lab. For starters, a user program called `test.c` is added. Take a
 take a look a this file, it should be self explanatory. Next, two commands, `ps` and `nice` have been added. Run `ps`. Your output should look like this:
@@ -86,7 +86,7 @@ init     1       SLEEPING        2
  test    4       RUNNING         2 
 ```
 
-## Step Four -- Implement the Priority Queue
+## Implement the Priority Queue
 
 Replace the `scheduler(void)` function with this starter code:
 
@@ -136,7 +136,7 @@ Under the TODO, implement a loop to look through the `ptable` for the process wi
 
 Upload your `proc.c`  to gradescope question 2 when done.
 
-## Step 5 -- Test It Out!
+## Test It Out!
 
 We need to be careful when testing this scheduler. Processes get priority 2 when run from the the terminal, but priority 10 otherwise, meaning anything we run will take precedence over internal processes like taking inputs from the terminal. However, Xv6 runs by default with two processors, giving us some leeway.
 
