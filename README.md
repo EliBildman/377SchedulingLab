@@ -134,7 +134,7 @@ void scheduler(void)
 
 Under the TODO, implement a loop to look through the `ptable` for the process with the *lowest* priority number. `highP` should point to this process when completed. You can access a process' priority with `p->priority` if `p` is a pointer to a process struct.
 
-Upload your `proc.c`  to gradescope question 2 when done.
+Paste your implementation into question 2 when you're done.
 
 ## Test It Out!
 
